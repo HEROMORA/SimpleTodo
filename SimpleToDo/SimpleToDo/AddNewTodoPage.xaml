@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleToDo.AddNewTodoPage"
+             Padding="5">
+
+        <StackLayout>
+        <TableView HasUnevenRows="True">
+            <TableRoot>
+            <TableSection Title="Todo Details">
+                <EntryCell Label="Content" Text="{Binding Content}" />
+
+                    <ViewCell>
+                        <Label HorizontalOptions="Center" Text="Description" />
+                    <Editor 
+                        HeightRequest="300"
+                        HorizontalOptions="Center" 
+                        Text="{Binding Description}" />
+                </ViewCell>
+            </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button HorizontalOptions="Center" Text="Save" Command="{Binding SaveNewTodoCommand}" />
+    </StackLayout>
+
+</ContentPage>
