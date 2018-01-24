@@ -4,20 +4,20 @@
              x:Class="SimpleToDo.AddNewTodoPage"
              Padding="5">
 
-        <StackLayout>
+    <StackLayout>
         <TableView HasUnevenRows="True">
             <TableRoot>
-            <TableSection Title="Todo Details">
-                <EntryCell Label="Content" Text="{Binding Content}" />
+                <TableSection Title="Todo Details">
+                    <EntryCell Label="Content" Text="{Binding Content}" />
 
                     <ViewCell>
                         <Label HorizontalOptions="Center" Text="Description" />
-                    <Editor 
-                        HeightRequest="300"
-                        HorizontalOptions="Center" 
-                        Text="{Binding Description}" />
-                </ViewCell>
-            </TableSection>
+                        <Editor 
+                            HeightRequest="300"
+                            HorizontalOptions="Center" 
+                            Text="{Binding Description}" />
+                    </ViewCell>
+                </TableSection>
             </TableRoot>
         </TableView>
         <Button HorizontalOptions="Center" Text="Save" Command="{Binding SaveNewTodoCommand}" />

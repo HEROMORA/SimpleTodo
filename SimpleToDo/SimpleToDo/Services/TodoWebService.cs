@@ -13,7 +13,7 @@ namespace SimpleToDo.Services
     public class TodoWebService
     {
         private static HttpClient _client;
-        private const string Url = "http://localhost:5000/api/todo";
+        private const string Url = @"http://localhost:5000/api/todo";
 
         public TodoWebService()
         {
